@@ -57,7 +57,7 @@ class TipoDePagamentoController extends Controller
         if (!isset($pagamento)) {
             return response()->json([
                 'status' => false,
-                'message' => "Pagamento não atualizado"
+                'message' => "Pagamento não encontrado"
             ]);
         }
         if (isset($request->nome)) {
