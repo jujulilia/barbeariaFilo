@@ -2,11 +2,11 @@
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
 ```
- git clone https://github.com/ClaudiodoSenai/barbearialb.git
+ git clone https://github.com/ClaudiodoSenai/barbearia_filo.git
 ```
 2. Acesse o diretório do projeto:
 ```
-cd barbearialb
+cd barbearia_filo
 ```
 3. Inicializando o Repositorio
 ```
@@ -24,7 +24,8 @@ code .
 ```
 
 ## Insomnia
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=barbearialb&uri=https%3A%2F%2Fgithub.com%2FClaudiodoSenai%2Fbarbearialb%2Fblob%2Fmain%2FInsomniaDefinitivo%2520.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Barbearia%20Fil%C3%B3&uri=https%3A%2F%2Fgithub.com%2FClaudiodoSenai%2FBarbearia_filo%2Fblob%2Fmain%2FInsomniaAcabadin.json)
+
 
 ## Licença
 
