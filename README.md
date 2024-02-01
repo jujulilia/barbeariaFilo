@@ -24,7 +24,7 @@ code .
 ```
 
 ## Insomnia
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Barbearia%20Fil%C3%B3&uri=https%3A%2F%2Fgithub.com%2FClaudiodoSenai%2FBarbearia_filo%2Fblob%2Fmain%2FInsomniaAcabadin.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Barbearia%20Fil%C3%B3&uri=https%3A%2F%2Fgithub.com%2FClaudiodoSenai%2FBarbearia_filo%2Fblob%2Fmain%2FInsomnia.json)
 
 
 ## Licença
