@@ -23,6 +23,8 @@ class TipoDePagamentoController extends Controller
             "message" => "Métodos de Pagamento Adicionado",
             "data" => $tipoPagamento
         ], 200);
+
+        
     }
 
 

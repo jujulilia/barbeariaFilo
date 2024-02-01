@@ -105,7 +105,7 @@ class ClienteController extends Controller
         if (!isset($cliente)) {
             return response()->json([
                 'status' => false,
-                'message' => "Cliente não atualizado"
+                'message' => "Cliente não encontrado"
             ]);
         }
         if (isset($request->celular)) {
