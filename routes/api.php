@@ -60,9 +60,6 @@ Route::put('profissional/cliente/update', [ClienteController::class, 'atualizarC
 Route::delete('profissional/cliente/delete/{id}', [ClienteController::class, 'excluirCliente']);
 Route::get('profissional/cliente/all', [ClienteController::class, 'retornarTodos']);
 
-
-
-
 //Agendamento
 
 Route::get('agenda/horarios/profissionais', [AgendaController::class, 'retornarTodos']);
@@ -96,9 +93,6 @@ Route::post('admin/atualizar/senha', [AdminController::class, 'esqueciMinhaSenha
 Route::delete('admin/excluir/{id}', [AdminController::class, 'excluirAdmin']);
 Route::put('admin/atualizar', [AdminController::class, 'atualizarAdmin']);
 Route::get('admin/retornarTodos', [AdminController::class, 'retornarTodos']);
-
-
-
 
 //Rota das Formas de Pagamento
 
