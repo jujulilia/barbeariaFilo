@@ -11,20 +11,24 @@ class TipoDePagamentoController extends Controller
 {
     public function tipoPagamento(FormaPagamentoRequest $request)
     {
+        $originalStatus = $request->status;
+        $statusText = $request->status ? 'Ativado' : 'Desativado';
+    
         $tipoPagamento = TipoDePagamento::create([
             'nome' => $request->nome,
-            'taxa'=> $request->taxa,
-            'status'=> $request->status
-           
-            
+            'taxa' => $request->taxa,
+            'status' => $originalStatus 
         ]);
+    
         return response()->json([
-            "sucess" => true,
+            "success" => true,
             "message" => "Métodos de Pagamento Adicionado",
-            "data" => $tipoPagamento
+            "data" => [
+                'nome' => $tipoPagamento->nome,
+                'taxa' => $tipoPagamento->taxa,
+                'status' => $statusText 
+            ]
         ], 200);
-
-        
     }
 
 
@@ -47,7 +51,8 @@ class TipoDePagamentoController extends Controller
     }
 
     public function updatePagamento(FormaPagamentoUpdateRequest $request)
-    { $pagamento= TipoDePagamento::find($request->id);
+    {
+        $pagamento = TipoDePagamento::find($request->id);
 
         if (!isset($pagamento)) {
             return response()->json([
@@ -71,9 +76,10 @@ class TipoDePagamentoController extends Controller
             'message' => 'Tipo de Pagamento Atualizado'
         ]);
     }
-    
-    public function retornarTodos()
+
+    public function retornarTodos(Request $request)
     {
+
         $pagamento = TipoDePagamento::all();
         return response()->json([
             'status' => true,
