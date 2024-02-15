@@ -6,6 +6,8 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProfissionalController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\TipoDePagamentoController;
+use App\Http\Middleware\IsAuthenticated;
+use App\Http\Middleware\SetSanctumGuard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -93,6 +95,12 @@ Route::post('admin/atualizar/senha', [AdminController::class, 'esqueciMinhaSenha
 Route::delete('admin/excluir/{id}', [AdminController::class, 'excluirAdmin']);
 Route::put('admin/atualizar', [AdminController::class, 'atualizarAdmin']);
 Route::get('admin/retornarTodos', [AdminController::class, 'retornarTodos']);
+Route::post('/login', [AdminController::class, 'login']);
+Route::get('admin/teste', [AdminController::class, 'verificaUsuarioLogado'])->middleware([
+        'auth:sanctum',
+        SetSanctumGuard::class,
+        IsAuthenticated::class
+    ]);
 
 //Rota das Formas de Pagamento
 
