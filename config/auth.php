@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'administradors' => [
+            'driver' => 'session',
+            'provider' => 'administradors'
+        ]
     ],
 
     /*
@@ -69,6 +74,10 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'administradors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Administrador::class
+        ]
     ],
 
     /*
@@ -97,6 +106,7 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
     ],
 
     /*

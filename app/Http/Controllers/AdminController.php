@@ -13,10 +13,10 @@ class AdminController extends Controller
     public function criarAdmin(AdminFormRequest $request)
     {
         $admin = Administrador::create([
-            'nome' =>  $request->nome,
+            'name' =>  $request->name,
             'email' => $request->email,
             'cpf' => $request->cpf,
-            'senha' => Hash::make($request->senha)
+            'password' => Hash::make($request->password)
 
         ]);
         return response()->json([
@@ -79,8 +79,8 @@ class AdminController extends Controller
             ]);
         }
 
-        if (isset($request->nome)) {
-            $admin->nome = $request->nome;
+        if (isset($request->name)) {
+            $admin->name = $request->name;
         }
 
         if (isset($request->email)) {
@@ -119,18 +119,18 @@ class AdminController extends Controller
 
 
 
-    public function esqueciMinhaSenha(Request $request)
+    public function esqueciMinhapassword(Request $request)
     {
         $admin = Administrador::where('email','LIKE', $request->email)->first();
         if ($admin) {
-            $novaSenha = $admin->cpf;
+            $novapassword = $admin->cpf;
             $admin->update([
-                'senha' => Hash::make($novaSenha),
+                'password' => Hash::make($novapassword),
             ]);
             return response()->json([        
                 'status' => true,
-                'message' => 'Senha redefinida',
-                'nova_senha' => $novaSenha
+                'message' => 'password redefinida',
+                'nova_password' => $novapassword
             ]);
         } else {
             return response()->json([
